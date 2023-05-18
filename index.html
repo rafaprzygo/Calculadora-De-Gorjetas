@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="description" content="Criando uma calculadora de gorjetas">
+    <meta name="author" content="Rafael Przygodzinski">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorjetas</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="author">
+        <h1>Author: Rafael Rodrigues Przygodzinski</h1>
+    </div>
+    <div id="box">
+        <div>
+            <h1 class="title">Calculadora de Gorjetas</h1>    
+        </div>         
+        <div>
+            <form class="tipsForm">
+                <label for="bill"> <!--bill conta-->
+                    <p>Quanto ficou a conta?</p>
+                </label>
+                <p>
+                    R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput">
+                </p>
+                <label for="serviceQuality">
+                    <p>Como foi o serviço?</p>
+                </label>
+                <p>
+                    <select name="serviceQuality" id="serviceQuality" class="formSelect">
+                        <option disabled selected value="0">-- Escolha uma opção</option>
+                        <option value="0.3">30% - Incrível</option>
+                        <option value="0.2">20% - Bom</option>
+                        <option value="0.15">15% - Aceitavel</option>
+                        <option value="0.1">10% - Ruim</option>
+                        <option value="0.05">05% - Pessímo</option>
+                    </select>
+                </p>
+                <label for="people">
+                    <p>Quantas pessoas vão dividir a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="1" name="people" id="people" class="formInput"> pessoa(s)
+                </p>
+                <!-- <button type="submit">Calcular</button> -->
+                <div style="padding-left: 200px;" >
+                    <button type="button" id="button" onclick="calcularGorjeta()">CALCULAR</button>
+                </div>
+                <div id="result"; style="margin: 30px; text-align: center; margin-right: 45px;"></div>    
+            </form>
+        </div>
+    </div>
+</body>
+</html>
